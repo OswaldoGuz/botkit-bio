@@ -1,14 +1,7 @@
-var botId = ["st-12345","st-67890"];
+var botId = "st-12345";
 var botName = "testBot";
 var sdk = require("./lib/sdk");
 
-/*
- * This is the most basic example of BotKit.
- *
- * It showcases how the BotKit can intercept the message being sent to the bot or the user.
- *
- * We can either update the message, or chose to call one of 'sendBotMessage' or 'sendUserMessage'
- */
 module.exports = {
     botId   : botId,
     botName : botName,

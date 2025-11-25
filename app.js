@@ -1,3 +1,9 @@
+/* Archivo principal del Botkit. Aquí registramos los módulos que va a requerir el bot para funcionar
+por medio de
+sdk.registerBot(require('./starter.js'));
+También aquí instaciamos la aplicación y el servidor.
+*/
+
 var Application = require("./lib/app");
 var Server      = require("./lib/server");
 var sdk         = require("./lib/sdk");
@@ -10,11 +16,4 @@ sdk.checkNodeVersion();
 
 server.start();
 
-sdk.registerBot(require('./FindAFlight.js'));
-sdk.registerBot(require('./SimpleConversationalBot.js'));
-sdk.registerBot(require('./SimpleConversationalBotWithMultipleBotId.js'));
-sdk.registerBot(require('./GuessTheNumber.js'));
-sdk.registerBot(require('./BookACab.js'));
-sdk.registerBot(require('./OrderAPizza.js'));
-sdk.registerBot(require('./BotVariables.js'));
-sdk.registerBot(require('./LiveChat.js'));
+sdk.registerBot(require('./starter.js'));

@@ -1,4 +1,4 @@
-const axios = require('axios');
+const axios = require("axios");
 
 /**
  * Makes an HTTP Call using Axios.
@@ -13,21 +13,20 @@ const axios = require('axios');
  */
 
 async function makeHttpCall(method, url, data = null, headers = {}) {
-  try {
-    const response = await axios({
-      method,
-      url,
-      data,
-      headers,
-    });
+    try {
+        const response = await axios({
+            method,
+            url,
+            data,
+            headers,
+        });
 
-    return response;
-  } catch (error) {
-    throw error;
-  }
+        return response;
+    } catch (error) {
+        throw error;
+    }
 }
-
 
 module.exports = {
-    makeHttpCall
-}
+    makeHttpCall,
+};
