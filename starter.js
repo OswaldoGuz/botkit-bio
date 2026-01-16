@@ -1,10 +1,10 @@
-var botId = "st-12345";
-var botName = "testBot";
-var sdk = require("./lib/sdk");
-const AWS = require("aws-sdk");
-
 require("dotenv").config();
 
+var sdk = require("./lib/sdk");
+const logger = require("./lib/logger");
+
+const botId = process.env.BOT_ID;
+const botName = process.env.BOT_NAME;
 // Configure AWS credentials BEFORE initializing CloudWatch Logger
 AWS.config.update({
     accessKeyId: process.env.AWS_ACCESS_KEY,
