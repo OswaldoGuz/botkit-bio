@@ -4,14 +4,14 @@
     },
     "app": {
         "apiPrefix" : "",
-        "url": "https://0ddf-122-174-183-138.ngrok-free.app"
+        "url": "https://680a-187-189-163-76.ngrok-free.app"
     },
     "validations": {
         "leastNodeVersion": 10
     },
     "credentials": {
-        "apikey": "ljbTlnlEWr7zsF+2tvZmIZdONf1JgVi/sJHOuAYzf9I=",
-        "appId": "cs-780fcabf-68a7-5cf5-9ffc-bd818093f185",
+        "apikey": "6Z3MBrgFzZ5jzR6UXLH1eVBIl4SB9iboMy0+j8DnaDU=",
+        "appId": "cs-e47ef62c-ec35-502d-84e5-56f47969d523",
         "st-67890":{
             "apikey": "test_api_key2",
             "appId": "test_app_id2"

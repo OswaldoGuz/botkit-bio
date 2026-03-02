@@ -1,7 +1,9 @@
 require("dotenv").config();
 
 var sdk = require("./lib/sdk");
+//const logger = console;
 const logger = require("./lib/logger");
+const foreignLinesService = require("./getForeignLines");
 
 const botId = process.env.BOT_ID;
 const botName = process.env.BOT_NAME;
@@ -50,4 +52,28 @@ module.exports = {
         console.log("on_alert -->  : ", data, data.message);
         return sdk.sendAlertMessage(data, callback);
     },
+    on_webhook: function (requestId, data, componentName, callback) {
+    if (componentName === 'HookExtranjeros') {
+        const phoneNumber = data.context.phoneNumber;
+        const TT = data.context.TT;
+
+        foreignLinesService.getForeignLines({
+            numeroLinea: phoneNumber,
+            tt: TT
+        }).then((resultado) => {
+            data.context.apiSuccess = resultado.success;
+            data.context.apiAccion = resultado.accion;
+            data.context.apiMensaje = resultado.botMessage;
+
+            return callback(null, data);
+        }).catch((err) => {
+            data.context.apiSuccess = false;
+            data.context.apiMensaje = "Error en el servicio local.";
+            return callback(null, data);
+        });
+    } else {
+        
+        callback(null, data);
+    }
+}
 };
