@@ -1,13 +1,12 @@
 require("dotenv").config();
 
 var sdk = require("./lib/sdk");
-//const logger = console;
 const logger = require("./lib/logger");
 const foreignLinesService = require("./getForeignLines");
 
 const botId = process.env.BOT_ID;
 const botName = process.env.BOT_NAME;
-// Configure AWS credentials BEFORE initializing CloudWatch Logger
+/* Configure AWS credentials BEFORE initializing CloudWatch Logger
 AWS.config.update({
     accessKeyId: process.env.AWS_ACCESS_KEY,
     secretAccessKey: process.env.AWS_SECRET_KEY,
@@ -15,7 +14,7 @@ AWS.config.update({
 });
 
 const logger = new CloudWatchLogger(`/botkit/${botName}`, `stream-${botId}`);
-
+*/
 module.exports = {
     botId: botId,
     botName: botName,
