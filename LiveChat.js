@@ -47,7 +47,7 @@ function getPendingMessages( visitorId, ssid, last_message_id){
             });
         })
         .catch(function(e){
-            console.error(e);
+            //console.error(e);
             delete userDataMap[visitorId];
             delete _map[visitorId];
         });
@@ -171,7 +171,7 @@ function onUserMessage(requestId, data, cb){
         formdata.message = data.message;
         return api.sendMsg(visitorId, formdata)
             .catch(function(e){
-                console.error(e);
+                //console.error(e);
                 delete userDataMap[visitorId];
                 delete _map[visitorId];
                 return sdk.sendBotMessage(data, cb);

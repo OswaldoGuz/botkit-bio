@@ -46,7 +46,7 @@
 				type: 'get',
 				dataType: 'json',
 				success: function (data) {
-					console.log(data);
+					//console.log(data);
 					var messages = data;
 					var textMessages = [];
 					var chatContainer = $('.chat-container');
@@ -76,7 +76,7 @@
 						}
 						messagesHtml += innerhtml;
 					}
-					$("#content").append(messagesHtml);
+					$("#content").append(document.createTextNode(messagesHtml));
 				}
 			});
 		});
