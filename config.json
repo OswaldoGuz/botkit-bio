@@ -1,10 +1,10 @@
 {
     "server": {
-        "port": 8005
+        "port": 8006
     },
     "app": {
         "apiPrefix" : "",
-        "url": "https://680a-187-189-163-76.ngrok-free.app"
+        "url": "https://bk-internal-project.com/portal_extranjeros"
     },
     "validations": {
         "leastNodeVersion": 10
